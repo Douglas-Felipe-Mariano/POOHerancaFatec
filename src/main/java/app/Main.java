@@ -1,17 +1,20 @@
 package app;
 
+import java.time.LocalDate;
+
 public class Main{
-    public static void main(String[] args) {
-        Tarefa[] tarefas = new Tarefa[5];
-        Compromisso[] compromissos = new Compromisso[5];
+    public static void main(String[] args){
+        PessoaFisica pessoaFisica = new PessoaFisica("Douglas",
+                                                     "Aimorés",
+                                                     LocalDate.of(2004,07,11),
+                                                     "54285301890");
 
-        tarefas[0] = new Tarefa(0, "Teste", false);
-        tarefas[4] = new Tarefa(3, "Novo Teste", false);
+        PessoaJuridica pessoaJuridica = new PessoaJuridica("SOS Cartuchos",
+                                                           "Caetés",
+                                                           "SOS Recargas",
+                                                           "123");
 
-        compromissos[2] = new Compromisso(0,"Compromisso","Hoje","Amanhã");
-        System.out.println(compromissos[2]);
-
-        System.out.println(tarefas[0].getDescricao());
-        System.out.println(tarefas[4].getDescricao());
+        System.out.println(pessoaFisica.exibirInformacoes()); 
+        System.out.println(pessoaJuridica.exibirInformacoes()); 
     }
-}   
+}
