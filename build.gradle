@@ -4,5 +4,5 @@ plugins{
 }
 
 application{
-    mainClass = 'app.Main'
+    mainClass = 'application.Main'
 }
